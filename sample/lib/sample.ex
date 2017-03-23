@@ -67,4 +67,11 @@ defmodule Sample do
         :error->"file doesn't exist"
       end
   end
+  def recur_print_hello_world(msg,n) when n<=1 do
+    IO.puts msg
+  end
+  def recur_print_hello_world(msg,n) do
+      IO.puts msg
+      recur_print_hello_world(msg,n-1)
+  end
 end
